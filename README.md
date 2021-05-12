@@ -36,4 +36,4 @@
 
 ## Statistical description of data is in report.html
 
-<a href="/home/shubham/code/HeartAttack/report.html">click</a>
+<a href="https://github.com/Sb2001nov/HeartAttack-Analysis/blob/main/report.html">click</a>
