@@ -88,7 +88,7 @@
 
 ### Model to predict heart attack
 
-```
+```py
 
 train_data = data.drop(['output'], axis=1)
 
