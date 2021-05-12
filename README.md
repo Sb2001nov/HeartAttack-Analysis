@@ -36,4 +36,10 @@
 
 ## Statistical description of data is in report.html
 
-<a href="https://github.com/Sb2001nov/HeartAttack-Analysis/blob/main/report.html">click</a>
+<b>For Report</b> : <a href="https://github.com/Sb2001nov/HeartAttack-Analysis/blob/main/report.html">click</a>
+
+## general statistical description
+
+### correlation
+	
+![Alt correlation]('/plots/correlation.png')
