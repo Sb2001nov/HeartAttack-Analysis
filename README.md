@@ -42,4 +42,4 @@
 
 ### correlation
 	
-![Alt correlation]('/plots/correlation.png')
+![Alt correlation]('plots/correlation.png')
