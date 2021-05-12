@@ -83,7 +83,8 @@
 
 ![](plots/heartRateVSHeartAttack.png)
 
-	There's positive correlation co-efficient of 0.421741 ("pearson") between them, so we can assume that having a higher heart rate is a factor contributing to heart attack.
+	There's positive correlation co-efficient of 0.421741 ("pearson") between them,
+	so we can assume that having a higher heart rate is a factor contributing to heart attack.
 
 
 ### Model to predict heart attack
