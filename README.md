@@ -25,8 +25,8 @@
 	rest_ecg : resting electrocardiographic results
 	
 		Value 0: normal 
-		Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of
-			> 0.05 mV) 
+		Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression
+			of > 0.05 mV) 
 		Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
 	
 	thalach : maximum heart rate achieved
