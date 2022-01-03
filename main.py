@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from pandas_profiling import ProfileReport
+#from pandas_profiling import ProfileReport
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
