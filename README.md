@@ -106,3 +106,5 @@ print(np.mean(prediction == y_test))
 ```
 
 	accuracy of model => 0.6842105263157895 or 68.42%
+
+	increase accuracy to 86% using auto-sklearn
