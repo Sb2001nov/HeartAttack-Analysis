@@ -5,10 +5,10 @@
 	age : Age of the patient
 	
 	sex : Sex of the patient
+		1 = male
+		0 = female
 	
 	exng: exercise induced angina (1 = yes; 0 = no)
-	
-	ca: number of major vessels (0-3)
 	
 	cp : Chest Pain type chest pain type
 		Value 1: typical angina
@@ -31,6 +31,24 @@
 	
 	thalach : maximum heart rate achieved
 	
+	exang: exercise induced angina
+		1 = yes
+		0 = no
+		
+	oldpeak = ST depression induced by exercise relative to rest
+	slope: the slope of the peak exercise ST segment
+		Value 0: upsloping
+		Value 1: flat
+		Value 2: downsloping
+
+	ca: number of major vessels (0-3)
+	
+	thal:
+		0 = error (in the original dataset 0 maps to NaN's)
+		1 = fixed defect
+		2 = normal
+		3 = reversable defect
+
 	target :
 		0= less chance of heart attack
 		1= more chance of heart attack
