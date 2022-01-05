@@ -4,33 +4,7 @@ from flask import jsonify
 import numpy as np
 import pickle
 
-class model:
-    def __init__(self, age, sex, cp, trtbps, chol, fbs, restecg, thalachh, exng, oldpeak, slp, caa, thall) -> None:
-        self.age = age
-        self.sex = sex
-        self.cp = cp
-        self.trtbps = trtbps
-        self.chol = chol
-        self.fbs = fbs
-        self.restecg = restecg
-        self.thalachh = thalachh
-        self.exng = exng
-        self.oldpeak = oldpeak
-        self.slp = slp
-        self.caa = caa
-        self.thall = thall
-
-        self.data = np.array([[self.age, self.sex, self.cp, self.trtbps, self.chol, self.fbs, self.restecg, self.thalachh, self.exng, self.oldpeak, self.slp, self.caa, self.thall]])
-
-    def calculate(self) -> bool:
-        try:
-            try:
-                ml = pickle.load(open('model.pkl', 'rb'))
-            except:
-                return "can not load model"
-            return ml.predict(self.data)[0]
-        except:
-            return "an error occurred during computation please check your provided values"
+ml = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
@@ -54,7 +28,7 @@ def api():
     caa = request.args.get('caa', type=int)
     thall = request.args.get('thall', type=int)
 
-    val = model(age, sex, cp, trtbps, chol, fbs, restecg, thalachh, exng, oldpeak, slp, caa, thall).calculate()
+    val = ml.predict(np.array([[age, sex, cp, trtbps, chol, fbs, restecg, thalachh, exng, oldpeak, slp, caa, thall]]))
     if val in [0,1]:
         return jsonify({
                 "result": int(val)
