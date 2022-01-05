@@ -15,7 +15,7 @@ function show() {
   caa = document.querySelector("#caa").value;
   thall = document.querySelector("#thall").value;
 
-  const url = `http://127.0.0.1:5000/api/?age=${age}&sex=${sex}&cp=${cp}&trtbps=${trtbps}&chol=${chol}&fbs=${fbs}&restecg=${rest_ecg}&thalachh=${thalachh}&exng=${exng}&oldpeak=${oldpeak}&slp=${slp}&caa=${caa}&thall=${thall}`;
+  const url = `https://hearthealthml.herokuapp.com/api/?age=${age}&sex=${sex}&cp=${cp}&trtbps=${trtbps}&chol=${chol}&fbs=${fbs}&restecg=${rest_ecg}&thalachh=${thalachh}&exng=${exng}&oldpeak=${oldpeak}&slp=${slp}&caa=${caa}&thall=${thall}`;
 
   fetch(url)
     .then((res) => res.json())
