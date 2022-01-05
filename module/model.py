@@ -28,7 +28,7 @@ class model:
                 ml = pickle.load(file=file)
             return ml.predict(self.data)[0]
         except:
-            return "error occurred during computation"
+            return "an error occurred during computation please check your provided values"
 
 
 
