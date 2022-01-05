@@ -1,12 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <H1>HELLO</H1>
-</body>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/like--v3.png">
+
+    <title>Heart Health</title>
+  </head>
+  <body>
+
+    <div class="main" id="main">
+        <div class="result" id="result">
+            <h5>In any case of inconvenience please consult a doctor, result shown here is based on the previous patient.</h5>
+        </div>
+        <form action="/test" name="main_form" method="post">
+            <div class="row">
+                <div class="col">
+                    <label for="age"><b>Age</b></label>
+                    <input name="age" class="form-control" id="age" placeholder="Age">
+                </div>
+                <div class="col">
+                    <label for="sex"><b>Sex</b></label>
+                    <select name="sex" id="sex" class="form-control">
+                        <option value="0">Female</option>
+                        <option value="1">Male</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="cp"><b>Chest Pain Type</b></label>
+                    <select name="cp" id="cp" class="form-control">
+                        <option value="1">Typical Angina</option>
+                        <option value="2">Atypical Angina</option>
+                        <option value="3">Non-Anginal Pain</option>
+                        <option value="4">Asymptomatic</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="trtbps"><b>Resting Blood Pressure(mm Hg)</b></label>
+                    <input name="trtbps" class="form-control" id="trtbps" placeholder="RBP">
+                </div>
+            </div>
+
+            <label for="chol"><b>Cholestoral in mg/dl | Fetched via BMI Sensor</b></label>
+            <input name="chol" class="form-control" id="chol" placeholder="mg/dl">
+
+            <label for="fbs"><b>Fasting Blood Sugar > 120 mg/dl</b></label>
+            <input name="fbs" class="form-control" id="fbs" placeholder="mg/dl">
+
+
+            <label for="rest_ecg "><b>Resting Electrocardiographic Results</b></label>
+            <pre>
+    Value 0: normal 
+    Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) 
+    Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
+            </pre>
+            <select name="rest_ecg" id="rest_ecg" class="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+
+
+            <div class="row">
+                <div class="col">
+                    <label for="thalach"><b>Maximum Heart Rate Achieved</b></label>
+                    <input name="thalach" class="form-control" id="thalach" placeholder="100">
+                </div>
+                <div class="col">
+                    <label for="exang"><b>Exercise Induced Angina</b></label>
+                    <select name="exang" id="exang" class="form-control">
+                        <option value="1">YES</option>
+                        <option value="0">NO</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="oldpeak"><b>ST Depression Induced by Exercise Relative to Rest</b></label>
+            <input name="oldpeak" class="form-control" id="oldpeak" placeholder="1.04">
+            
+            <div class="row">
+                <div class="col">
+                    <label for="slp"><b>Slope of the Peak Exercise ST Segment</b></label>
+                    <select name="slp" id="slp" class="form-control">
+                        <option value="0">UP-Sloping</option>
+                        <option value="1">Flat</option>
+                        <option value="2">DOWN-sloping</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="caa"><b>number of major vessels (0-3) colored by flourosopy</b></label>
+                    <select name="caa" id="caa" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="thall"><b>Maximum Heart Rate Achieved</b></label>
+            <select name="thall" id="thall" class="form-control">
+                <option value="1">Fixed defect</option>
+                <option value="2">Normal</option>
+                <option value="3">Reversable Defect</option>
+            </select>
+
+            <button type="button" id="submit" onclick="topFunction()" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='javascript/base.js') }}"></script>
+  </body>
 </html>
