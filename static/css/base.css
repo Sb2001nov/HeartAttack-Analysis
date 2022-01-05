@@ -1,0 +1,29 @@
+.main{
+    margin: 5% 10%;
+}
+
+form input{
+    margin-top: 1%;
+}
+
+form .row {
+    margin-top: 2%;
+}
+
+form label {
+    margin-top: 2%;
+}
+
+form .btn{
+    float: right;
+    margin: 2% 0%;
+}
+
+.result{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 30px;
+}
+.result p {
+    color: red;
+}
