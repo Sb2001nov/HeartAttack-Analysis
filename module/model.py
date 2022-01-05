@@ -1,8 +1,5 @@
 import numpy as np
 import pickle
-import os
-
-cwd = os.getcwd()
 
 class model:
     def __init__(self, age, sex, cp, trtbps, chol, fbs, restecg, thalachh, exng, oldpeak, slp, caa, thall) -> None:
@@ -25,7 +22,7 @@ class model:
     def calculate(self) -> bool:
         try:
             try:
-                ml = pickle.load(open('module/model.pkl', 'rb'))
+                ml = pickle.load(open('model.pkl', 'rb'))
             except:
                 return "can not load model"
             return ml.predict(self.data)[0]
