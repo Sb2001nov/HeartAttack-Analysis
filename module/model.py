@@ -24,8 +24,11 @@ class model:
 
     def calculate(self) -> bool:
         try:
-            with open(f"{cwd}/module/model.pkl", "rb") as file:
-                ml = pickle.load(file=file)
+            try:
+                with open(f"{cwd}/module/model.pkl", "rb") as file:
+                    ml = pickle.load(file=file)
+            except:
+                return "can not load model"
             return ml.predict(self.data)[0]
         except:
             return "an error occurred during computation please check your provided values"
