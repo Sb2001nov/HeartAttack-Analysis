@@ -32,7 +32,7 @@ def api():
             })
     else:
         return jsonify({
-                "result": "error"
+                "result": val
             })
 
 if __name__ == '__main__':
